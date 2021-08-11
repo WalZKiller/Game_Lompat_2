@@ -1,0 +1,51 @@
+/* buat body sizing and color dulu */
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buat canvas - size centre, image */
+.canvas {
+    height: 50vmin;
+    width: 100vmin;
+    background-image: url('../Screenshot_HK_Dream_Realm_01.png');
+    background-size: cover;
+    background-position-y: -4vmin;
+    position: relative;
+}
+
+/* buat player, and kasi lekat kat canvas */
+.player {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: white;
+    position: absolute;
+    bottom: 3vmin;
+}
+
+/* buat enemy, sama mcm player tapi belah kanan */
+.enemy {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: red;
+    position: absolute;
+    bottom: 3vmin;
+    right: 0vmin;
+}
+
+/* buat score kat atas kanan */
+.score {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    right: 6vmin;
+    top: 2vmin;
+}
+
+h1 {
+    margin: 0vmin;
+}
