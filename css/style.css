@@ -17,9 +17,11 @@ body {
     background-size: cover;
     background-position-y: -4vmin;
     position: relative;
+    overflow: hidden;
 }
 
 /* buat player, and kasi lekat kat canvas */
+/* player properties */
 .player {
     height: 10vmin;
     width: 10vmin;
@@ -28,7 +30,20 @@ body {
     bottom: 3vmin;
 }
 
+.jump-animation {
+    animation: player-jump .75s;
+}
+
+@keyframes player-jump {
+    0% {bottom: 3vmin}
+    50% {bottom: 20vmin}
+    100% {bottom: 3vmin}
+}
+
+/* end player properties */
+
 /* buat enemy, sama mcm player tapi belah kanan */
+/* enemy properties */
 .enemy {
     height: 10vmin;
     width: 10vmin;
@@ -38,14 +53,22 @@ body {
     right: 0vmin;
 }
 
+.move-animation {
+    animation: enemy-move 3s infinite;
+}
+
+@keyframes enemy-move {
+    0% {right: 0}
+    100% {right: 140vmin}
+}
+
+/* end enemy properties */
+
 /* buat score kat atas kanan */
-.score {
+h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: absolute;
     right: 6vmin;
     top: 2vmin;
-}
-
-h1 {
     margin: 0vmin;
 }
